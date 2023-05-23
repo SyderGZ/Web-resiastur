@@ -36,7 +36,7 @@ $result = $conn->query($sql);
 echo "<table>";
 echo "<tr class='trhead'>";
 echo "<th>Nombre</th><th>Habitación</th><th>Ficha</th>";
-if($rol_usuario==0){
+if($rol_usuario==3){
   echo "<th>Editar</th><th>Borrar</th>";
 }
 echo "</tr>";
@@ -47,7 +47,7 @@ if ($result->num_rows > 0) {
     echo "<td>". $row["nombre"]. "</td>";
     echo "<td>". $row["habitacion"]. "</td>";
     echo '<td><a href="ver.php?id='.$row["id"].'">Ver</a></td>';
-    if($rol_usuario==0){
+    if($rol_usuario==3){
     echo '<td><a href="editar.php?id='.$row["id"].'">Editar</a></td>';
     echo '<td><a href="borrar.php?id='.$row["id"].'">borrar</a></td>';
     }

@@ -42,8 +42,11 @@ if(isset($_GET['id'])){
           echo "<p>". $row["habitacion"]. "</p>";
       
           echo '<a href="listado.php">Volver a la Lista de Usuarios</a> ';
+
+          if($rol_usuario==3){
           echo '<a href="editar.php?id='.$row["id"].'">Editar información</a> ';
           echo '<a href="borrar.php?id='.$row["id"].'">Borrar datos del usuario</a> ';
+          }
         }
       } else {
         echo '<p>El Usuario solicitado se ha borrado o no existe. Puede <a href="listado.php">volver a Lista de Usuarios haciendo click aquí</a></p>';

@@ -13,7 +13,6 @@ $conexion=new mysqli($servername, $username, $password, $basedatos);
     if(!empty($_POST["username"]) && !empty($_POST["password"])){
         $username=$_POST["username"];
         $password=$_POST["password"];
-        $nickname=$_POST["nickname"];
 
         $sql=$conexion->query("SELECT * FROM usuarios WHERE nombre='$username' AND password='$password'");
 
