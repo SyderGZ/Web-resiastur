@@ -13,6 +13,7 @@ $conexion=new mysqli($servername, $username, $password, $basedatos);
     if(!empty($_POST["username"]) && !empty($_POST["password"])){
         $username=$_POST["username"];
         $password=$_POST["password"];
+        $nickname=$_POST["nickname"];
 
         $sql=$conexion->query("SELECT * FROM usuarios WHERE nombre='$username' AND password='$password'");
 
@@ -20,6 +21,7 @@ $conexion=new mysqli($servername, $username, $password, $basedatos);
             //$_SESSION["id"]=$datos->id;
             $_SESSION["usuario"]=$datos->nombre;
             $_SESSION["rol"]=$datos->rol;
+            $_SESSION["nick"]=$datos->nickname;
             //$_SESSION["password"]=$datos->password;
             header ("location:http://resiastur.local/");
         }else{

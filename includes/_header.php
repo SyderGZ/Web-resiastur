@@ -11,6 +11,7 @@ else{
     $sesion = 1;
     $nom_usuario= $_SESSION["usuario"];
     $rol_usuario= $_SESSION["rol"];
+    $nom_nickname= $_SESSION["nick"];
 }
 
 
@@ -36,20 +37,26 @@ else{
         <div class="logo">
             <img src="http://resiastur.local/img/logo.png" alt="ResiAstur Logo">
             <h1>ResiAstur</h1>
-        </div>
-        <?php if($sesion){?>
+            <?php if($sesion){?>
         <div class="saludo">
-            <p>Bienvenido <?php echo $nom_usuario; 
-            if($rol_usuario==3){
-                echo "eres admin";
-            }
-            else{
-                echo "eres empleado";
-            }
+        <i class="fa-solid fa-user"></i>
+            <p> <?php echo $nom_nickname; 
+
+
+            // if($rol_usuario==3){
+            //     echo "eres admin";
+            // }
+            // else{
+            //     echo "eres empleado";
+            // }
+
+
             ?>
             </p>
         </div>
         <?php } ?>
+        </div>
+        
         <nav class="navigation">
             <ul>
                 <li><a href="http://resiastur.local/index.php">Inicio</a></li>

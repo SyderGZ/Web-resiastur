@@ -11,7 +11,7 @@ if (empty($_SESSION["usuario"])) {
   header("Location: sesion/noacceso.php");
   exit();
 }
-if ($_SESSION["rol"]!=0) {
+if ($_SESSION["rol"]!=3) {
   header("Location: sesion/noacceso.php");
   exit();
 }
@@ -27,9 +27,9 @@ if ($conn->connect_error) {
 }
 
 // Crear Tabla
-$sql = "INSERT INTO `usuarios` (`nombre`, `password`, `rol`)
+$sql = "INSERT INTO `usuarios` (`nombre`, `password`, `rol`, `nickname`)
 VALUES
-('dhernandez','123456','0');";
+('dhernandez','123456','3','Daniel Hernandez');";
 
 if ($conn->query($sql) === TRUE){
   echo "Se ha creado ";

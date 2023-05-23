@@ -18,14 +18,15 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-if(isset($_GET['nombre']) && isset($_GET['password'])){
+if(isset($_GET['nombre']) && isset($_GET['password']) && isset($_GET['nickname'])){
     $nombre=$_GET['nombre'];
     $password=$_GET['password'];
+    $nickname=$_GET['nickname'];
  
   
   
-  $sql = "INSERT INTO usuarios (nombre, password)
-  VALUES ('".$nombre."', '".$password."');";
+  $sql = "INSERT INTO usuarios (nombre, password, nickname)
+  VALUES ('".$nombre."', '".$password."', '".$nickname."');";
   $result = $conn->query($sql);
   
   echo "<h2>Te has registrado correctamente </h2>";
@@ -42,7 +43,9 @@ if(isset($_GET['nombre']) && isset($_GET['password'])){
   
   
   <form action="" method="get">
-    <label for="nombre">Nombre del Usuario:</label>
+    <label for="nickname">Nombre y apellido</label>
+    <input type="text" id="nickname" name="nickname">
+    <label for="nombre">Usuario:</label>
     <input type="text" id="nombre" name="nombre">
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password">

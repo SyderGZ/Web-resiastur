@@ -11,7 +11,7 @@ if (empty($_SESSION["usuario"])) {
   header("Location: sesion/noacceso.php");
   exit();
 }
-if ($_SESSION["rol"]!=0) {
+if ($_SESSION["rol"]!=3) {
   header("Location: sesion/noacceso.php");
   exit();
 }
@@ -32,7 +32,8 @@ $sql = "CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nombre` varchar(36) NOT NULL,
   `password` varchar(36) NOT NULL,
-  `rol` int NULL
+  `rol` int NULL,
+  `nickname` varchar(36) NOT NULL
 );";
 
   if ($conn->query($sql) === TRUE){

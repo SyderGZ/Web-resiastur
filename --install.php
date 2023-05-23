@@ -10,7 +10,7 @@ if (empty($_SESSION["usuario"])) {
   header("Location: sesion/noacceso.php");
   exit();
 }
-if ($_SESSION["rol"]!=0) {
+if ($_SESSION["rol"]!=3) {
   header("Location: sesion/noacceso.php");
   exit();
 }
