@@ -1,0 +1,4 @@
+### Inicio  Rewrite
+# Activa el sistema de reescritura de URL
+
+RewriteEngine on;
