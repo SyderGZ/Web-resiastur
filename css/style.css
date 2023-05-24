@@ -598,7 +598,10 @@
         color:var(--c3);
     }
 
+    label{
+      color:var(--c3);
 
+    }
 
 
                                          /* ESTILOS DE LAS FICHAS */
@@ -855,4 +858,176 @@
         display: flex;
         gap: 10px;
         align-items: center;
+      }
+
+
+
+
+
+
+
+                                         /* ESTILOS DEL INICIO DE SESION */
+
+        /*  ********************************************************************************************************
+            ********************************************************************************************************
+            ********************************************************************************************************
+            ********************************************************************************************************
+        */
+
+
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .screen {		
+        background: linear-gradient(90deg, var(--c2), var(--cl));		
+        position: relative;	
+        height: 450px;
+        width: 560px;	
+        box-shadow: 0px 0px 24px var(--c3);
+      }
+      
+      .screen__content {
+        z-index: 1;
+        position: relative;
+        height: 100%;
+      }
+      
+      .screen__background {		
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        -webkit-clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0 0);	
+      }
+      
+      .screen__background__shape {
+        transform: rotate(45deg);
+        position: absolute;
+      }
+      
+      .screen__background__shape1 {
+        height: 520px;
+        width: 520px;
+        background: var(--cl);	
+        top: -50px;
+        right: 120px;	
+        border-radius: 0 72px 0 0;
+      }
+      
+      .screen__background__shape2 {
+        height: 220px;
+        width: 220px;
+        background: var(--c1);	
+        top: -172px;
+        right: 0;	
+        border-radius: 32px;
+      }
+      
+      .screen__background__shape3 {
+        height: 540px;
+        width: 190px;
+        background: linear-gradient(270deg, var(--c1), var(--cl));
+        top: -24px;
+        right: 0;	
+        border-radius: 32px;
+      }
+      
+      .screen__background__shape4 {
+        height: 400px;
+        width: 200px;
+        background: var(--c3);	
+        top: 420px;
+        right: 50px;	
+        border-radius: 60px;
+      }
+      
+      .login {
+        width: 320px;
+        padding: 30px;
+        padding-top:0px;
+      }
+      
+      .login__field {
+        padding: 20px 0px;
+        position: relative;
+      }
+      
+      .login__icon {
+        position: absolute;
+        top: 30px;
+        color: var(--c3);
+      }
+      
+      .login__input {
+        border: none!important;
+        border-bottom: 2px solid var(--c3)!important;
+        background: none!important;
+        padding: 10px!important;
+        padding-left: 30px!important;
+        font-weight: 700!important;
+        width: 75%!important;
+        transition: .2s!important;
+      }
+      
+      .login__input:active,
+      .login__input:focus,
+      .login__input:hover {
+        outline: none;
+        border-bottom-color: var(--c3);
+      }
+      
+      .login__submit {
+        background: var(--cl);
+        font-size: 14px;
+        margin-top: 30px;
+        padding: 16px 20px;
+        border-radius: 26px;
+        border: 1px solid var(--c3);
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        color: var(--c3);
+        box-shadow: 0px 2px 2px var(--c3);
+        cursor: pointer;
+        transition: .2s;
+      }
+      
+      .login__submit:active,
+      .login__submit:focus,
+      .login__submit:hover {
+        border-color: var(--c3);
+        outline: none;
+      }
+      
+      .button__icon {
+        font-size: 24px;
+        margin-left: auto;
+        color: var(--c3);
+      }
+
+      .login__submit input[type="submit"]{
+        background: none;
+        border:none;
+        font-size: 16px;
+        padding:0;
+        margin-left:15px;
+        cursor:pointer;
+      }
+      .login__submit a{
+        font-size: 16px;
+        text-decoration: none;
+        color:var(--c3);
+        text-transform: none;
+        padding:0;
+
+        margin-left:15px;
       }
