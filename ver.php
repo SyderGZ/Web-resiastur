@@ -141,14 +141,28 @@ if(isset($_GET['id'])){
 
       <?php include 'includes/_footer.php';?>
 
+
+
+
+
+
+
+
+
+<!-- AQUÍ EL SCRIPT MAL TIRADO ( hay que acomodarlo bien en un script.js) -->
+
+
+
+
       <script>
   const buttons = document.querySelectorAll(".card-buttons button");
-const sections = document.querySelectorAll(".card-section");
-const card = document.querySelector(".card");
+  const sections = document.querySelectorAll(".card-section");
+  const card = document.querySelector(".card");
 
-const handleButtonClick = e => {
+  const handleButtonClick = e => {
   const targetSection = e.target.getAttribute("data-section");
   const section = document.querySelector(targetSection);
+  
   targetSection !== "#about" ?
   card.classList.add("is-active") :
   card.classList.remove("is-active");

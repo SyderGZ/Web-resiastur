@@ -16,6 +16,7 @@
     </div>
                 <br><br>
         <input id="submit" type="submit" value="Iniciar sesión" name="btniniciar">
+        <button><a href="http://resiastur.local/registrar.php">Registrarse</a></button>
         </form>
    
 
