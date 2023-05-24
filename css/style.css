@@ -894,6 +894,7 @@
         z-index: 1;
         position: relative;
         height: 100%;
+        margin-left:30px;
       }
       
       .screen__background {		
@@ -1000,16 +1001,18 @@
         cursor: pointer;
         transition: .2s;
       }
-      
       .login__submit:active,
       .login__submit:focus,
       .login__submit:hover {
         border-color: var(--c3);
         outline: none;
+        background:var(--c3);
       }
-      
+    .login__submit:hover input[type="submit"], .login__submit:hover a, .login__submit:hover i{
+        color:white;
+      }
       .button__icon {
-        font-size: 24px;
+        font-size: 14px;
         margin-left: auto;
         color: var(--c3);
       }
