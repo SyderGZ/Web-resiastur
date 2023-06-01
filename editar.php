@@ -11,7 +11,7 @@ if (empty($_SESSION["usuario"])) {
     header("Location: sesion/noacceso.php");
     exit();
 }
-if ($_SESSION["rol"]<2) {
+if ($_SESSION["rol"]<3) {
     header("Location: sesion/noacceso.php");
     exit();
 }
@@ -27,6 +27,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+
 if(isset($_GET['id'])){
     $id=$_GET['id'];
 }
@@ -40,8 +41,8 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     ?>
-
-<form action="actualizar_datos.php" method="get">
+  
+<form action="<? echo $miURL?>actualizar_datos.php" method="get">
 
     <input type="hidden" name="id" value="<? echo $row['id']?>">
 

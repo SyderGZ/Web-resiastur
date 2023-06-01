@@ -114,11 +114,11 @@ if(isset($_GET['id'])){
 <br>
 <?
           
-          echo '<a href="listado.php">Volver a la Lista de Usuarios</a> ';
+          echo '<a href="'.$miURL.'listado">Volver a la Lista de Usuarios</a> ';
 
           if($rol_usuario==3){
-          echo '<a href="editar.php?id='.$row["id"].'">Editar información</a> ';
-          echo '<a href="borrar.php?id='.$row["id"].'">Borrar datos del usuario</a> ';
+          echo '<a href="'.$miURL.'editar-ficha/'.$row["id"].'">Editar información</a> ';
+          echo '<a href="'.$miURL.'borrar.php?id='.$row["id"].'">Borrar datos del usuario</a> ';
           }
         }
       } else {
@@ -133,13 +133,29 @@ if(isset($_GET['id'])){
       }
       
       
-      echo '<a href="insertar.php">Añadir Usuario</a>';
+      echo '<a href="'.$miURL.'insertar">Añadir Usuario</a>';
       ?>
 
 
 
 
       <?php include 'includes/_footer.php';?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

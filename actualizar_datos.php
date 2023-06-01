@@ -48,7 +48,7 @@ echo "<h2>Los datos del Usuario $nombre se han actualizado correctamente en la b
 
 
 
-echo '<a href="insertar.php">Añadir otro Usuario</a>';
+
 echo '<a href="listado.php">Volver a Lista de Usuarios</a>';
 
 }

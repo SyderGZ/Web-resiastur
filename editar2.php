@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     ?>
 
-<form action="actualizar_datos2.php" method="get">
+<form action="<? echo $miURL?>actualizar_datos2.php" method="get">
 
     <input type="hidden" name="id" value="<? echo $row['id']?>">
 

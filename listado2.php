@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
     echo "<td>". $row["nombre"]. "</td>";
     echo "<td>". $row["password"]. "</td>";
     echo "<td>". $row["rol"]. "</td>";
-    echo '<td><a href="editar2.php?id='.$row["id"].'">Editar</a></td>';
+    echo '<td><a href="editar-usuario/'.$row["id"].'">Editar</a></td>';
     echo '<td><a href="borrar2.php?id='.$row["id"].'">borrar</a></td>';
     echo "</tr>";
 

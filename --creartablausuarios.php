@@ -28,7 +28,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "CREATE TABLE `usuarios` (
+$sql = "CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nombre` varchar(36) NOT NULL,
   `password` varchar(36) NOT NULL,

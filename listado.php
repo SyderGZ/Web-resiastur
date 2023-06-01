@@ -46,9 +46,9 @@ if ($result->num_rows > 0) {
     echo "<tr>";
     echo "<td>". $row["nombre"]. "</td>";
     echo "<td>". $row["habitacion"]. "</td>";
-    echo '<td><a href="ver.php?id='.$row["id"].'">Ver</a></td>';
+    echo '<td><a href="ficha/'.$row["id"].'">Ver</a></td>';
     if($rol_usuario==3){
-    echo '<td><a href="editar.php?id='.$row["id"].'">Editar</a></td>';
+    echo '<td><a href="editar-ficha/'.$row["id"].'">Editar</a></td>';
     echo '<td><a href="borrar.php?id='.$row["id"].'">borrar</a></td>';
     }
     echo "</tr>";

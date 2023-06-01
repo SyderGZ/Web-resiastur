@@ -59,15 +59,15 @@ else{
         
         <nav class="navigation">
             <ul>
-                <li><a href="http://resiastur.local/index.php">Inicio</a></li>
+                <li><a href="http://resiastur.local/inicio">Inicio</a></li>
                 <?php if($sesion){?>
                 <?php  if($rol_usuario==3){ ?>
-                     <li><a href="http://resiastur.local/--install.php">Instalador</a></li>
-                     <li><a href="http://resiastur.local/listado2.php">Administrador</a></li>
-                     <li><a href="http://resiastur.local/listado.php">Tablas</a></li>
+                     <li><a href="http://resiastur.local/instalador">Instalador</a></li>
+                     <li><a href="http://resiastur.local/usuarios">Administrador</a></li>
+                     <li><a href="http://resiastur.local/listado">Tablas</a></li>
                 <?php } 
                 else if($rol_usuario>=2){ ?>
-                     <li><a href="http://resiastur.local/listado.php">Tablas</a></li>
+                     <li><a href="http://resiastur.local/listado">Tablas</a></li>
                 <?php }
                 }?>
                 <li>
@@ -75,7 +75,7 @@ else{
                 <?php if($sesion){?>
                     <a href="http://resiastur.local/sesion/cerrarsesion.php">Cerrar Sesión</a></li>
                 <? } else{ ?>
-                    <a href="http://resiastur.local/sesion/iniciarsesion.php">Iniciar Sesión</a></li>
+                    <a href="http://resiastur.local/login">Iniciar Sesión</a></li>
                 <? } ?>
             
             

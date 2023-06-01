@@ -4,7 +4,7 @@
     <div class="container">
 	<div class="screen">
 		<div class="screen__content">
-			<form action="controlador-login.php" method="post" class="login">
+			<form action="<? echo $miURL?>sesion/controlador-login.php" method="post" class="login">
 
 
 				<div class="login__field">
