@@ -4,9 +4,9 @@
 
 # Activa Rewirte Engine
 RewriteEngine On
+RewriteBase /
 
-# Redireccion a error 404
-ErrorDocument 404       http://resiastur.local/error404
+
 
 
 
@@ -20,7 +20,7 @@ RewriteRule ^login/?$          sesion/iniciarsesion.php
 
 RewriteRule ^registro/?$       registrar.php
 
-RewriteRule ^error404/?$       404.php
+#RewriteRule ^error404/?$       http://resiastur.local/404.php
 
 RewriteRule ^listado/?$        listado.php
 RewriteRule ^usuarios/?$       listado2.php
@@ -33,6 +33,8 @@ RewriteRule ^instalador/?$     --install.php
 
 
 
+# Redireccion a error 404
+ErrorDocument 404 http://resiastur.local/error/404.php
 
 
 
@@ -44,5 +46,4 @@ RewriteRule ^editar-usuario/([a-zA-Z0-9_-]+)$ editar2.php?id=$1
 
 
 
- RewriteRule ^actualizar-usuario/([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+)$ actualizar_datos2.php?id=$1&nombre=$2&password=$3&rol=$4 [QSA]
-  RewriteRule ^([0-9a-zA-Z-_]+)$ actualizar_datos2.php?id=$1 [QSA]
+
